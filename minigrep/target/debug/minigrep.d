@@ -1,0 +1,1 @@
+/Users/vcollak/Documents/DATA/DEV/Rust/learnRust/minigrep/target/debug/minigrep: /Users/vcollak/Documents/DATA/DEV/Rust/learnRust/minigrep/src/lib.rs /Users/vcollak/Documents/DATA/DEV/Rust/learnRust/minigrep/src/main.rs
