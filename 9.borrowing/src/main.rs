@@ -23,7 +23,7 @@ fn main() {
     let mut s3 = String::from("test");
     let r1 = &mut s3;
 
-    //cannot have 2 mutable refereces.
+    //cannot have 2 mutable references.
     //bellow will fail
     //let r2 = &mut s3;
     //println!("{} {}", r1, r2);
@@ -35,7 +35,10 @@ fn main() {
     let r2 = &s4; // no problem
 
     //cannot have two references to the same if
-    //one is mutable and needs to be used.
+    //one is mutable and needs to be used
+    //in this example we both set the immutable and mutable
+    //references and want to use all of them later
+    //cannot do that
     //let r3 = &mut s4; // BIG PROBLEM
     //println!("{}, {}, and {}", r1, r2, r3);
 
@@ -67,5 +70,6 @@ fn calculate_length(s: &String) -> usize {
 }
 
 fn change(s: &mut String) {
+    //Appends a given string slice onto the end of this String.
     s.push_str(" world");
 }
