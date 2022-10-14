@@ -1,4 +1,4 @@
-//structs that defines several user fields
+//User struct that defines several user fields
 struct User {
     active: bool,
     username: String,
@@ -61,13 +61,14 @@ fn main() {
     //use the rest of the fields from user2
     let user3 = User {
         email: String::from("jane@test.com"),
-        ..user2
+        ..user2 //this moves the ownership from user2 to user3
     };
 
     //this works because active is on the stack and was copied
     println!("{}", user2.active);
 
     //this will fail because the reference from user2 was moved to user3
+    //and username is on the heap
     //println!("{}", user2.username);
 
     //define a tuple struct
