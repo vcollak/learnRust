@@ -26,11 +26,17 @@ fn main() {
     //bellow will not compile
     //println!("{}", s1);
 
-    //unlike above, this implements a deep copy - not just
+    //unlike above, "clone" implements a deep copy - not just
     //moving a pointer as below.
     let s11 = String::from("Hello Amy");
     let s22 = s11.clone();
     println!("s11 is: {} and s22 is {}", s11, s22);
+
+    //we can also create a reference to z11 from z12
+    //this means that z12 simply points to the
+    let z11 = String::from("Ahoj");
+    let z12 = &z11;
+    println!("z11 is {} and z12 is {}", z11, z12);
 
     //////////////////////////
     // Ownership and functions
@@ -48,7 +54,7 @@ fn main() {
     let x = 5; // x comes into scope
 
     makes_copy(x); // x would move into the function,
-                   // but i32 is Copy, so it's okay to still
+                   // but i32 is Copy (on the stack), so it's okay to still
                    // use x afterward
 
     //we can use X because it's on a stack
