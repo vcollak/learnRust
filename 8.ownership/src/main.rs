@@ -70,6 +70,14 @@ fn main() {
     let s222 = String::from("hello");
     let s333 = takes_and_gives_ownership(s222);
     println!("{}", s333);
+
+    let s2222 = String::from("ref");
+    pass_by_reference(&s2222);
+    println!("s2222 is: {}", s2222);
+}
+
+fn pass_by_reference(my_str: &String) {
+    println!("the pass_by_reference got this string: {}", my_str);
 }
 
 fn gives_ownership() -> String {
