@@ -29,6 +29,10 @@ fn main() {
     println!("{}", first_word);
 }
 
+//converts a string to bytes and then
+//iterates over the bytes until it sees the space
+//it then returns the string till the space
+//in reality we could have used split_whitespace function on the string
 fn first_word(word: &String) -> &str {
     //convert to bytes
     let word_bytes = word.as_bytes();
