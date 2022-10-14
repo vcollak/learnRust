@@ -1,9 +1,14 @@
 fn main() {
+    //call function without a parameter
     print_hello();
+
+    //pass a parameter
     print_passed_number(2);
+
+    //pass multiple parameters
     print_number_and_label(10, 'h');
 
-    //this is a statment. unline an expression, it does not return a value
+    //this is a statement. unlike an expression, it does not return a value
     let _x = 10;
 
     //as a result, below will not compile
@@ -23,7 +28,7 @@ fn main() {
         you turn it into a statement, and it will then not return a value.
         Keep this in mind as you explore function return values and expressions next.
         */
-        x + 1 //returns a value
+        x + 1 //without a ";" it returns a value
     };
     println!("Y is {y}");
 
