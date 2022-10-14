@@ -25,7 +25,7 @@ fn main() {
     let number = if condition { 5 } else { 6 };
     println!("Number: {}", number);
 
-    //this fails because the expression
+    //this fails to compile because the expression
     //does not return the same type
     //let number = if condition { 5 } else { "six" };
 
@@ -50,10 +50,9 @@ fn main() {
         counter += 1;
 
         if counter == 10 {
-            break counter * 2;
+            break counter * 2; //this returns a value
         }
     };
-
     println!("Result is {result}");
 
     //loop labels
@@ -66,11 +65,11 @@ fn main() {
         loop {
             println!("remaining {remaining}");
             if remaining == 9 {
-                break;
+                break; //breaks out of the inner loop
             }
 
             if count == 2 {
-                break 'counting_up;
+                break 'counting_up; //breaks out of the outer (counting-up) loop
             }
 
             remaining -= 1;
@@ -89,7 +88,6 @@ fn main() {
         println!("{number}");
         number -= 1;
     }
-
     println!("Liftoff");
 
     //another while, but prone to mistakes such as
@@ -103,8 +101,7 @@ fn main() {
         index += 1;
     }
 
-    //safer approach - just iterate over
-    //the elements
+    //safer approach - just iterate over the elements with "for"
     let b = [10, 20, 30, 40, 50];
     for element in b {
         println!("value is {element}");
