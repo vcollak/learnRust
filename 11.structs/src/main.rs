@@ -1,4 +1,4 @@
-//User struct that defines several user fields
+//A struct that defines several user fields
 struct User {
     active: bool,
     username: String,
