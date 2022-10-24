@@ -1,3 +1,4 @@
+//import the hashmap from the standard library
 use std::collections::HashMap;
 
 fn main() {
@@ -8,9 +9,14 @@ fn main() {
     scores.insert(String::from("blue"), 10);
     scores.insert(String::from("yellow"), 50);
 
+    //another way to insert using string literal
+    scores.insert("red".to_string(), 55);
+
+    //define key we want to return
     let team_name = String::from("blue");
 
-    //this returns an option so need to match before we can se it
+    //get the value by key
+    //this returns an Option so need to match before we can se it
     let score = scores.get(&team_name);
     match score {
         Some(score) => println!("Team {} score is {}", team_name, score),
@@ -25,8 +31,8 @@ fn main() {
 
     //below will panic. we're getting a value that does not exist
     //and instead of checking for Some or None in match
-    //or using unwrap_or, unwrap will panic is the key "red" does not exist
-    //let score_blue1 = scores.get("red").unwrap();
+    //or using unwrap_or, unwrap will panic is the key "pink" does not exist
+    //let score_blue1 = scores.get("pink").unwrap();
 
     //iterating over hashmap
     for (key, value) in &scores {
@@ -63,6 +69,8 @@ fn main() {
     //with a different value, the value associated with that key will be replaced.
     let mut scores1 = HashMap::new();
     scores1.insert(String::from("blue"), 10);
+
+    //this will update since "blue" already exists
     scores1.insert(String::from("blue"), 25);
     println!("{:?}", scores1);
 
@@ -71,9 +79,10 @@ fn main() {
     scores2.insert(String::from("blue"), 10);
 
     //this will not change the blue team score, because the key already exists
+    //"entry" Gets the given key's corresponding entry in the map for in-place manipulation.
     scores2.entry(String::from("blue")).or_insert(50);
 
-    //the yellow key does not exist so it will insert a new record / entry
+    //the yellow key does not exist so it will insert a new entry
     scores2.entry(String::from("yellow")).or_insert(50);
 
     println!("{:?}", scores);
