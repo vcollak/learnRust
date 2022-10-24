@@ -15,9 +15,12 @@ fn main() {
     let plant = Asparagus {};
     println!("I'm growing {:?}", plant);
 
-    //create a new strawberry
-    let fruit: Strawberry = Strawberry::new(String::from("Very Berry"));
+    //create a new strawberry using a string literal
+    let fruit: Strawberry = Strawberry::new("Very Berry");
 
     //print results of the get_name method
     println!("{}", fruit.get_name());
+
+    //print by directly accessing the name
+    println!("{}", fruit.name);
 }

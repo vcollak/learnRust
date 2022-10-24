@@ -9,8 +9,11 @@ pub struct Strawberry {
 //implements the Strawberry
 impl Strawberry {
     //create a new instance of Strawberry and return it
-    pub fn new(name: String) -> Self {
-        Strawberry { name: name }
+
+    pub fn new(name: &str) -> Strawberry {
+        Strawberry {
+            name: String::from(name),
+        }
     }
 
     //return the name
