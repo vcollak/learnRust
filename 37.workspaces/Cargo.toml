@@ -1,0 +1,8 @@
+[workspace]
+
+
+# Add various crates that below to this workspace 
+members = [
+    "adder",
+    "add_one",
+]

@@ -1,0 +1,11 @@
+[package]
+name = "adder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#adder crate depends on the add_one and rand
+add_one = { path = "../add_one"}
+rand = "0.8.3"
