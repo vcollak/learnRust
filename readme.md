@@ -1,7 +1,7 @@
 # Learn Rust by Example
 
 <p align="center">
-  <img src="https://doc.rust-lang.org/book/img/ferris/not_desired_behavior.svg">
+  <img width="260" height="211" src="https://doc.rust-lang.org/book/img/ferris/not_desired_behavior.svg">
 </p>
 
 
