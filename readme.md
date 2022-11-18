@@ -49,3 +49,6 @@ This repository includes examples for the Rust programming language. It's organi
 - [Threads](basics/40.threads/)
 - [Threads and sending messages between threads](basics/41.threads_and_messages/)
 - [Threads another example sending messages](basics/42.threads_and_messages/)
+- [Object oriented Rust](basics/43.object_oriented_rust/)
+- [Object oriented rust showing encapsulation](basics/44.object_oriented_rust_encapsulation/)
+- [Object oriented rust showing "inheritance"](basics/45.object_oriented_rust_inheritance/)
