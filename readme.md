@@ -52,3 +52,4 @@ This repository includes examples for the Rust programming language. It's organi
 - [Object oriented Rust](basics/43.object_oriented_rust/)
 - [Object oriented rust showing encapsulation](basics/44.object_oriented_rust_encapsulation/)
 - [Object oriented rust showing "inheritance"](basics/45.object_oriented_rust_inheritance/)
+- [Matching patterns](basics/46.patterns/)
